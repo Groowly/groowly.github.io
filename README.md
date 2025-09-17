@@ -18,7 +18,7 @@ import sys
 name = "world"
 print(f"Hello, {name}")
 ```
-
+# Variables & Strings
 
 | Task        | Bash               | Python         |
 | ----------- | ------------------ | -------------- |
@@ -345,5 +345,6 @@ except Exception as e:
     print(f"FAIL {e}", file=sys.stderr)
     sys.exit(1)
 ```
+
 
 
