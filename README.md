@@ -151,7 +151,6 @@ print(greet("Alice"))
 ``` bash
 (( x = 1 + 2 ))
 echo $((x * 3))
-
 ```
 
 ## Python
@@ -162,7 +161,6 @@ print(x * 3)
 # integer division vs float:
 5 // 2  # 2
 5 / 2   # 2.5
-
 ```
 
 # Command subsitution
@@ -225,7 +223,6 @@ if [[ $# -gt 0 ]]; then
 else
   grep -c "ERROR"
 fi
-
 ```
 
 ## Python
@@ -247,7 +244,6 @@ print(count)
 # usage: ./read_region.sh config.json
 set -euo pipefail
 jq -r '.service.region' "$1"
-
 ```
 
 ## Python
@@ -259,7 +255,6 @@ import sys, json
 with open(sys.argv[1]) as f:
     data = json.load(f)
 print(data["service"]["region"])
-
 ```
 
 
@@ -272,7 +267,6 @@ print(data["service"]["region"])
 set -euo pipefail
 find . -maxdepth 1 -type f -size +1M -printf '%P\n' 2>/dev/null || \
 find . -maxdepth 1 -type f -size +1048576c -exec basename {} \;   # fallback if -printf not available
-
 ```
 
 ## Python
@@ -285,7 +279,6 @@ THRESH = 1 * 1024 * 1024
 for p in Path(".").iterdir():
     if p.is_file() and p.stat().st_size > THRESH:
         print(p.name)
-
 ```
 
 
@@ -303,7 +296,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 echo "Hello, $NAME"
-
 ```
 
 ## Python
@@ -315,7 +307,6 @@ p = argparse.ArgumentParser()
 p.add_argument("--name", default="world")
 args = p.parse_args()
 print(f"Hello, {args.name}")
-
 ```
 
 
@@ -334,7 +325,6 @@ else
   echo "FAIL $code" >&2
   exit 1
 fi
-
 ```
 
 ## Python
@@ -354,6 +344,6 @@ try:
 except Exception as e:
     print(f"FAIL {e}", file=sys.stderr)
     sys.exit(1)
-
 ```
+
 
